@@ -62,7 +62,7 @@ node ('slave1'){
 	  git 'https://github.com/nghaouiditeb/cicd-workshop.git'
 	  withEnv(["STAGING_FRONT_URL=${STAGING_FRONT_URL}"]){
 	    sh 'ls'
-	    sh './integration-tests/run.sh'
+	    //sh './integration-tests/run.sh'
 	  }  
 	} 
     }
