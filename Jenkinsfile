@@ -20,7 +20,7 @@ node ('master'){
    }
    def image = ''
    stage ('dockerize'){
-       image = sudo docker.build "nizgh/oto-${svcName}:${env.BUILD_NUMBER}"
+       image = docker.build "nizgh/oto-${svcName}:${env.BUILD_NUMBER}"
    }
     
     
