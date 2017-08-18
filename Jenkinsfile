@@ -1,5 +1,5 @@
 
-node ('master'){
+node ('slave1'){
 //define app url for component tests
     def APP_URL=""
     def svcName = 'orders'
@@ -20,7 +20,7 @@ node ('master'){
    }
    def image = ''
    stage ('dockerize'){
-       image = sh("docker build nizgh/oto-${svcName}:${env.BUILD_NUMBER}")
+       image = docker.build "nizgh/oto-${svcName}:${env.BUILD_NUMBER}"
    }
     
     
